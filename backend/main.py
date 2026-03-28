@@ -3,12 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 from dotenv import load_dotenv
 
-from models import AnalyzeResponse
-from services.parser import parse_log
-from services.detection import detect_sensitive_data
-from services.risk_engine import calculate_risk
-from services.ai_insights import generate_insights
-
+from backend.models import AnalyzeResponse
+from backend.services.parser import parse_log
+from backend.services.detection import detect_sensitive_data
+from backend.services.risk_engine import calculate_risk
+from backend.services.ai_insights import generate_insights
 # Load env variables (for OPENAI_API_KEY)
 load_dotenv()
 
